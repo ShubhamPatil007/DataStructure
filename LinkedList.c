@@ -3,6 +3,7 @@
 
 void createNode();
 void display();
+void deleteLast();
 
 struct Node{
 	int data;
@@ -13,7 +14,7 @@ struct Node* start = NULL;
 int main(){
 	int choice;
 	while(1){
-		printf("\n1.Create Node\n2.Display List\n>>");
+		printf("\n1.Create Node\n2.Display List\n3.Delete Last Node>>");
 		scanf("%d", &choice);
 		switch(choice){
 			case 1:
@@ -21,6 +22,9 @@ int main(){
 			break;
 			case 2:
 				display();
+			break;
+			case 3:
+				deleteLast();
 			break;
 			default:
 				printf("\nWrong Choice...\n");
@@ -64,6 +68,27 @@ void display(){
 			trav = trav->next;
 		}
 		printf("\n");
+	}
+}
+void deleteLast(){
+	struct Node *temp, *trav;
+	if(start == NULL)
+		printf("List is Empty\n");
+	else if(start->next == NULL){
+			trav = start;
+			start = NULL;
+			printf("%d deleted\n", trav->data);
+			free(trav);
+	}
+	else{
+		trav = start;
+		while(trav->next != NULL){
+			temp = trav;
+			trav = trav->next;
+		}
+		temp->next = NULL;
+		printf("%d deleted\n", trav->data);
+		free(trav);
 	}
 }
 
