@@ -14,7 +14,7 @@ struct Node* start = NULL;
 int main(){
 	int choice;
 	while(1){
-		printf("\n1.Create Node\n2.Display List\n3.Delete Last Node>>");
+		printf("\n1.Create Node\n2.Display List\n3.Delete Last Node\n>>");
 		scanf("%d", &choice);
 		switch(choice){
 			case 1:
