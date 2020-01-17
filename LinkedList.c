@@ -45,13 +45,13 @@ int main(){
 			default:
 				printf("\nWrong Choice...\n");
 				exit(0);
-				break;
+			break;
 		}
 	}
 }
 
 void createNode(){
-	struct Node *temp, *trav;
+	struct Node *temp = NULL, *trav = NULL;
 	temp = (struct Node*)malloc(sizeof(struct Node));
 	if(temp == NULL){
 		printf("\nInsufficient Memory Space...");
@@ -73,7 +73,7 @@ void createNode(){
 	}
 }
 void display(){
-	struct Node* trav;
+	struct Node* trav = NULL;
 	if(start == NULL)
 		printf("\nEmpty List...");
 	else{
@@ -87,7 +87,7 @@ void display(){
 	}
 }
 void deleteLast(){
-	struct Node *temp, *trav;
+	struct Node *temp = NULL, *trav = NULL;
 	if(start == NULL)
 		printf("List is Empty\n");
 	else if(start->next == NULL){
@@ -109,7 +109,7 @@ void deleteLast(){
 }
 
 void insertFirst(){
-	struct Node *temp, *trav;
+	struct Node *temp = NULL, *trav = NULL;
 	temp = (struct Node*)malloc(sizeof(struct Node));
 	if(temp == NULL){
 		printf("\nInsufficient Memory Space...");
@@ -128,7 +128,7 @@ void insertFirst(){
 	}
 }
 void deleteFirst(){
-	struct Node *trav;
+	struct Node *trav = NULL;
 	if(start == NULL)
 		printf("List is Empty\n");
 	else if(start->next == NULL){
@@ -144,7 +144,7 @@ void deleteFirst(){
 }
 void insertAtPosition(){
 	int pos = 0, i;
-	struct Node *temp, *trav;
+	struct Node *temp = NULL, *trav = NULL;
 	temp = (struct Node*)malloc(sizeof(struct Node));
 	if(temp == NULL){
 		printf("\nInsufficient Memory Space...");
@@ -176,7 +176,7 @@ void insertAtPosition(){
 }
 void deleteAtPosition(){
 	int pos = 0, i;
-	struct Node *trav_t, *trav;
+	struct Node *trav_t = NULL, *trav = NULL;
 	printf("Position: ");
 	scanf("%d",&pos);
 
